@@ -24,6 +24,7 @@
 		96FB90D6177977A000D498B2 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FB90D5177977A000D498B2 /* second@2x.png */; };
 		96FB90D9177977A100D498B2 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FB90D7177977A100D498B2 /* FirstViewController.xib */; };
 		96FB90DC177977A100D498B2 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FB90DA177977A100D498B2 /* SecondViewController.xib */; };
+		96FB90E41779828A00D498B2 /* VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FB90E31779828A00D498B2 /* VideoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		96FB90D5177977A000D498B2 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		96FB90D8177977A100D498B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		96FB90DB177977A100D498B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		96FB90E21779828A00D498B2 /* VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoManager.h; sourceTree = "<group>"; };
+		96FB90E31779828A00D498B2 /* VideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				96FB90C1177977A000D498B2 /* AppDelegate.m */,
 				96FB90C9177977A000D498B2 /* FirstViewController.h */,
 				96FB90CA177977A000D498B2 /* FirstViewController.m */,
+				96FB90E21779828A00D498B2 /* VideoManager.h */,
+				96FB90E31779828A00D498B2 /* VideoManager.m */,
 				96FB90CC177977A000D498B2 /* first.png */,
 				96FB90CE177977A000D498B2 /* first@2x.png */,
 				96FB90D0177977A000D498B2 /* SecondViewController.h */,
@@ -202,6 +207,7 @@
 				96FB90C2177977A000D498B2 /* AppDelegate.m in Sources */,
 				96FB90CB177977A000D498B2 /* FirstViewController.m in Sources */,
 				96FB90D2177977A000D498B2 /* SecondViewController.m in Sources */,
+				96FB90E41779828A00D498B2 /* VideoManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

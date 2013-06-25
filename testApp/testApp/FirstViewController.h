@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <NSXMLParserDelegate, NSURLConnectionDataDelegate, NSURLConnectionDelegate>
+
+@property (nonatomic, strong) NSMutableData *responseData;
+@property (nonatomic, strong) NSMutableString *currentStringValue;
 
 @end
