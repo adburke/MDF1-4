@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "VideoManager.h"
 
 @interface FirstViewController ()
 
@@ -46,8 +47,13 @@
 // Begin parsing XML
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
-    if ([elementName isEqualToString:@"video"]) {
+    if ([elementName isEqualToString:@"videos"]) {
         //NSLog(@"Video Found");
+        self.videosArray = [[NSMutableArray alloc] init];
+        return;
+    }
+    if ([elementName isEqualToString:@"video"]) {
+        self.currentVideo = [[VideoManager init] alloc];
     }
     
 }
@@ -65,6 +71,7 @@
 {
     if ([elementName isEqualToString:@"title"]) {
         NSLog(@"Video Tile = %@", self.currentStringValue);
+        
     }
     self.currentStringValue = nil;
 }

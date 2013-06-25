@@ -15,7 +15,12 @@
     self = [super init];
     if (self)
     {
-                
+        self.videoTitle = nil;
+        self.videoUrl = nil;
+        self.videoUserName = nil;
+        self.videoImgSml = nil;
+        self.videoImgMed = nil;
+        self.videoImgLrg = nil;
     }
     return self;
 }

@@ -10,4 +10,11 @@
 
 @interface VideoManager : NSObject
 
+@property (nonatomic, strong) NSString *videoTitle;
+@property (nonatomic, strong) NSString *videoUrl;
+@property (nonatomic, strong) NSString *videoUserName;
+@property (nonatomic, strong) NSString *videoImgSml;
+@property (nonatomic, strong) NSString *videoImgMed;
+@property (nonatomic, strong) NSString *videoImgLrg;
+
 @end
