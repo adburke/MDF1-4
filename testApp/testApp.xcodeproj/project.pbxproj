@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965BB2EF177A721C00A7F539 /* CVCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BB2EE177A721C00A7F539 /* CVCellController.m */; };
+		965BB2F1177A725700A7F539 /* CVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 965BB2F0177A725700A7F539 /* CVCell.xib */; };
 		96FB90B2177977A000D498B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FB90B1177977A000D498B2 /* UIKit.framework */; };
 		96FB90B4177977A000D498B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FB90B3177977A000D498B2 /* Foundation.framework */; };
 		96FB90B6177977A000D498B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FB90B5177977A000D498B2 /* CoreGraphics.framework */; };
@@ -28,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		965BB2ED177A721C00A7F539 /* CVCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CVCellController.h; path = ../CVCellController.h; sourceTree = "<group>"; };
+		965BB2EE177A721C00A7F539 /* CVCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CVCellController.m; path = ../CVCellController.m; sourceTree = "<group>"; };
+		965BB2F0177A725700A7F539 /* CVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CVCell.xib; path = ../CVCell.xib; sourceTree = "<group>"; };
 		96FB90AE177977A000D498B2 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FB90B1177977A000D498B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96FB90B3177977A000D498B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,18 +106,17 @@
 			children = (
 				96FB90C0177977A000D498B2 /* AppDelegate.h */,
 				96FB90C1177977A000D498B2 /* AppDelegate.m */,
+				965BB2ED177A721C00A7F539 /* CVCellController.h */,
+				965BB2EE177A721C00A7F539 /* CVCellController.m */,
 				96FB90C9177977A000D498B2 /* FirstViewController.h */,
 				96FB90CA177977A000D498B2 /* FirstViewController.m */,
 				96FB90E21779828A00D498B2 /* VideoManager.h */,
 				96FB90E31779828A00D498B2 /* VideoManager.m */,
-				96FB90CC177977A000D498B2 /* first.png */,
-				96FB90CE177977A000D498B2 /* first@2x.png */,
 				96FB90D0177977A000D498B2 /* SecondViewController.h */,
 				96FB90D1177977A000D498B2 /* SecondViewController.m */,
-				96FB90D3177977A000D498B2 /* second.png */,
-				96FB90D5177977A000D498B2 /* second@2x.png */,
 				96FB90D7177977A100D498B2 /* FirstViewController.xib */,
 				96FB90DA177977A100D498B2 /* SecondViewController.xib */,
+				965BB2F0177A725700A7F539 /* CVCell.xib */,
 				96FB90B8177977A000D498B2 /* Supporting Files */,
 			);
 			path = testApp;
@@ -121,6 +125,10 @@
 		96FB90B8177977A000D498B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96FB90CC177977A000D498B2 /* first.png */,
+				96FB90CE177977A000D498B2 /* first@2x.png */,
+				96FB90D3177977A000D498B2 /* second.png */,
+				96FB90D5177977A000D498B2 /* second@2x.png */,
 				96FB90B9177977A000D498B2 /* testApp-Info.plist */,
 				96FB90BA177977A000D498B2 /* InfoPlist.strings */,
 				96FB90BD177977A000D498B2 /* main.m */,
@@ -193,6 +201,7 @@
 				96FB90D6177977A000D498B2 /* second@2x.png in Resources */,
 				96FB90D9177977A100D498B2 /* FirstViewController.xib in Resources */,
 				96FB90DC177977A100D498B2 /* SecondViewController.xib in Resources */,
+				965BB2F1177A725700A7F539 /* CVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +217,7 @@
 				96FB90CB177977A000D498B2 /* FirstViewController.m in Sources */,
 				96FB90D2177977A000D498B2 /* SecondViewController.m in Sources */,
 				96FB90E41779828A00D498B2 /* VideoManager.m in Sources */,
+				965BB2EF177A721C00A7F539 /* CVCellController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +350,7 @@
 				96FB90E1177977A100D498B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

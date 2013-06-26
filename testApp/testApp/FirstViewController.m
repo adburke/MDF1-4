@@ -8,12 +8,16 @@
 
 #import "FirstViewController.h"
 #import "VideoManager.h"
+#import "CVCellController.h"
+
 
 @interface FirstViewController ()
 
 @end
 
 @implementation FirstViewController
+
+#pragma mark - NSConnection Section
 
 // NSURL method
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -43,6 +47,8 @@
         [parser parse];
     }
 }
+
+#pragma mark - XML Parsing 
 
 // Begin parsing XML
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
@@ -114,18 +120,48 @@
     if ( [elementName isEqualToString:@"video"] ) {
         // addresses and currentPerson are instance variables
         [self.videosArray addObject:self.currentVideo];
+        self.currentStringValue = nil;
         NSLog(@" Array = %@", self.videosArray);
         return;
     }
-    
+    self.currentStringValue = nil;
 }
 // Fires when parsing is complete
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
-    [self.videoListTable reloadData];
+    [self.collectionView reloadData];
 }
 
+#pragma mark - Main Collection View Creation
 
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if (self.videosArray == 0) {
+        return 1;
+    } else {
+        return self.videosArray.count;
+    }
+    
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"cvCell";
+    CVCellController *cell = (CVCellController *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    if (self.videosArray == 0) {
+        cell.cellLabel.text = @"Loading Data";
+    } else {
+        VideoManager *cellData = self.videosArray[indexPath.row];
+        cell.cellLabel.text = cellData.videoTitle;
+    }
+//    NSArray *pictures = [self.linkInfo objectForKey:@"Pictures"];
+//    cell.pictureHolder.image = [UIImage imageNamed:pictures[indexPath.row]];
+    
+
+    return cell;
+}
+
+#pragma mark - View lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -139,6 +175,8 @@
 
 - (void)viewDidLoad
 {
+    // Register the custom cell class
+    [self.collectionView registerClass:[CVCellController class] forCellWithReuseIdentifier:@"cvCell"];
     
     // Create the request
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:

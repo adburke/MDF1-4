@@ -15,6 +15,14 @@
     self = [super init];
     if (self)
     {
+//        self.videoDict = @{
+//                           @"title":nil,
+//                           @"url":nil,
+//                           @"userName":nil,
+//                           @"imgSml":nil,
+//                           @"imgMed":nil,
+//                           @"imgLrg":nil
+//                           };
         self.videoTitle = nil;
         self.videoUrl = nil;
         self.videoUserName = nil;
