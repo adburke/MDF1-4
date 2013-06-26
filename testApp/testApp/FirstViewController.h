@@ -11,6 +11,7 @@
 
 @interface FirstViewController : UIViewController <NSXMLParserDelegate, NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *videoListTable;
 @property (nonatomic, strong) NSMutableData *responseData;
 @property (nonatomic, strong) NSMutableArray *videosArray;
 @property (nonatomic, strong) VideoManager *currentVideo;

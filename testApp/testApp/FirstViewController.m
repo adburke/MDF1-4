@@ -53,7 +53,7 @@
         return;
     }
     if ([elementName isEqualToString:@"video"]) {
-        self.currentVideo = [[VideoManager init] alloc];
+        self.currentVideo = [[VideoManager alloc] init];
     }
     
 }
@@ -70,13 +70,60 @@
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
     if ([elementName isEqualToString:@"title"]) {
-        NSLog(@"Video Tile = %@", self.currentStringValue);
-        
+        //NSLog(@"Video Tile = %@", self.currentStringValue);
+        self.currentVideo.videoTitle = self.currentStringValue;
+        self.currentStringValue = nil;
+        return;
     }
-    self.currentStringValue = nil;
+    
+    if ([elementName isEqualToString:@"url"]) {
+        //NSLog(@"Video Tile = %@", self.currentStringValue);
+        self.currentVideo.videoUrl = self.currentStringValue;
+        self.currentStringValue = nil;
+        return;
+    }
+    
+    if ([elementName isEqualToString:@"thumbnail_small"]) {
+        //NSLog(@"Video Tile = %@", self.currentStringValue);
+        self.currentVideo.videoImgSml = self.currentStringValue;
+        self.currentStringValue = nil;
+        return;
+    }
+    
+    if ([elementName isEqualToString:@"thumbnail_medium"]) {
+        //NSLog(@"Video Tile = %@", self.currentStringValue);
+        self.currentVideo.videoImgMed = self.currentStringValue;
+        self.currentStringValue = nil;
+        return;
+    }
+    
+    if ([elementName isEqualToString:@"thumbnail_large"]) {
+        //NSLog(@"Video Tile = %@", self.currentStringValue);
+        self.currentVideo.videoImgLrg = self.currentStringValue;
+        self.currentStringValue = nil;
+        return;
+    }
+    
+    if ([elementName isEqualToString:@"user_name"]) {
+        //NSLog(@"Video Tile = %@", self.currentStringValue);
+        self.currentVideo.videoUserName = self.currentStringValue;
+        self.currentStringValue = nil;
+        return;
+    }
+    
+    if ( [elementName isEqualToString:@"video"] ) {
+        // addresses and currentPerson are instance variables
+        [self.videosArray addObject:self.currentVideo];
+        NSLog(@" Array = %@", self.videosArray);
+        return;
+    }
+    
 }
-
-
+// Fires when parsing is complete
+- (void)parserDidEndDocument:(NSXMLParser *)parser
+{
+    [self.videoListTable reloadData];
+}
 
 
 
