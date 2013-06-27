@@ -38,11 +38,30 @@
 {
     NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
     NSLog(@"%@",msg);
+    
+    // Used for offline testing of XML data placed in Documents of simulator
+    NSString *filePath = nil;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    filePath = [documentsDirectory stringByAppendingPathComponent:@"videos.xml"];
+    if ([fileManager fileExistsAtPath:filePath]) {
+        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+        
+        NSXMLParser *parser = [[NSXMLParser alloc] initWithData:fileData];
+        if (parser) {
+            [parser setDelegate:self];
+            [parser parse];
+        }
+    }
+    
+    
 }
 
 // Method to check received data from NSURL call and deal with it
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    
     NSXMLParser *parser = [[NSXMLParser alloc] initWithData:self.responseData];
     if (parser) {
         [parser setDelegate:self];
@@ -119,11 +138,18 @@
         return;
     }
     
+    if ([elementName isEqualToString:@"upload_date"]) {
+        //NSLog(@"Video Tile = %@", self.currentStringValue);
+        self.currentVideo.videoDate = self.currentStringValue;
+        self.currentStringValue = nil;
+        return;
+    }
+    
     if ( [elementName isEqualToString:@"video"] ) {
         // addresses and currentPerson are instance variables
         [self.videosArray addObject:self.currentVideo];
         self.currentStringValue = nil;
-        NSLog(@" Array = %@", self.videosArray);
+        //NSLog(@" Array = %@", self.videosArray);
         return;
     }
     self.currentStringValue = nil;
@@ -177,7 +203,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
+        self.title = NSLocalizedString(@"Video List", @"Video List");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;

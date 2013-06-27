@@ -32,6 +32,7 @@
 		96E7532B177C17020026A32D /* placeHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E7532A177C17020026A32D /* placeHolder.png */; };
 		96E7532F177C1B240026A32D /* CVInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E7532D177C1B240026A32D /* CVInfoViewController.m */; };
 		96E75330177C1B240026A32D /* CVInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E7532E177C1B240026A32D /* CVInfoViewController.xib */; };
+		96E75332177C21660026A32D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E75331177C21660026A32D /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		96E7532C177C1B240026A32D /* CVInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVInfoViewController.h; sourceTree = "<group>"; };
 		96E7532D177C1B240026A32D /* CVInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVInfoViewController.m; sourceTree = "<group>"; };
 		96E7532E177C1B240026A32D /* CVInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVInfoViewController.xib; sourceTree = "<group>"; };
+		96E75331177C21660026A32D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E75332177C21660026A32D /* MediaPlayer.framework in Frameworks */,
 				96E75325177C110F0026A32D /* ImageIO.framework in Frameworks */,
 				96E752E1177C10670026A32D /* UIKit.framework in Frameworks */,
 				96E752E3177C10670026A32D /* Foundation.framework in Frameworks */,
@@ -90,6 +93,7 @@
 		96E752D4177C10670026A32D = {
 			isa = PBXGroup;
 			children = (
+				96E75331177C21660026A32D /* MediaPlayer.framework */,
 				96E752E6177C10670026A32D /* testApp */,
 				96E752DF177C10670026A32D /* Frameworks */,
 				96E752DE177C10670026A32D /* Products */,

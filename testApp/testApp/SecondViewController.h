@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <NSXMLParserDelegate, NSURLConnectionDataDelegate, NSURLConnectionDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+@property (nonatomic, strong) NSMutableData *responseData;
+@property (nonatomic, strong) NSMutableString *currentStringValue;
+@property (nonatomic, strong) NSMutableArray *videosArray;
+@property (nonatomic, strong) NSMutableString *xmlTxt;
 
 @end

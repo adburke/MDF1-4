@@ -17,6 +17,6 @@
 @property (nonatomic, strong) NSString *videoImgSml;
 @property (nonatomic, strong) NSString *videoImgMed;
 @property (nonatomic, strong) NSString *videoImgLrg;
-@property (nonatomic, strong) UIImage *imgDl;
+@property (nonatomic, strong) NSString *videoDate;
 
 @end

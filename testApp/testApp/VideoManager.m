@@ -29,6 +29,7 @@
         self.videoImgSml = nil;
         self.videoImgMed = nil;
         self.videoImgLrg = nil;
+        self.videoDate = nil;
     }
     return self;
 }
