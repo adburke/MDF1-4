@@ -183,6 +183,7 @@
     
     // Call to SDWebImage.framework to asnyc load images with caching
     [cell.cellImg setImageWithURL:[NSURL URLWithString:cellData.videoImgLrg]placeholderImage:[UIImage imageNamed:@"placeHolder.png"]];
+    cell.cellTitle.text = [self.videosArray[indexPath.row] videoTitle];
     
     return cell;
 }

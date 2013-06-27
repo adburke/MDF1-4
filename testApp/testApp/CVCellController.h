@@ -11,5 +11,6 @@
 @interface CVCellController : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *cellImg;
+@property (weak, nonatomic) IBOutlet UILabel *cellTitle;
 
 @end
