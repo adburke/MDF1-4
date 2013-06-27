@@ -30,6 +30,8 @@
 		96E75328177C11950026A32D /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E75326177C11950026A32D /* FirstViewController.xib */; };
 		96E75329177C11950026A32D /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E75327177C11950026A32D /* SecondViewController.xib */; };
 		96E7532B177C17020026A32D /* placeHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E7532A177C17020026A32D /* placeHolder.png */; };
+		96E7532F177C1B240026A32D /* CVInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E7532D177C1B240026A32D /* CVInfoViewController.m */; };
+		96E75330177C1B240026A32D /* CVInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E7532E177C1B240026A32D /* CVInfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,9 @@
 		96E75326177C11950026A32D /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		96E75327177C11950026A32D /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		96E7532A177C17020026A32D /* placeHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeHolder.png; sourceTree = "<group>"; };
+		96E7532C177C1B240026A32D /* CVInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVInfoViewController.h; sourceTree = "<group>"; };
+		96E7532D177C1B240026A32D /* CVInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVInfoViewController.m; sourceTree = "<group>"; };
+		96E7532E177C1B240026A32D /* CVInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVInfoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +121,8 @@
 			children = (
 				96E75319177C10E20026A32D /* AppDelegate.m */,
 				96E7531A177C10E20026A32D /* AppDelegate.h */,
+				96E7532C177C1B240026A32D /* CVInfoViewController.h */,
+				96E7532D177C1B240026A32D /* CVInfoViewController.m */,
 				96E75317177C10E20026A32D /* VideoManager.h */,
 				96E75318177C10E20026A32D /* VideoManager.m */,
 				96E75312177C10C20026A32D /* CVCellController.h */,
@@ -127,6 +134,7 @@
 				96E75311177C10C20026A32D /* CVCell.xib */,
 				96E75326177C11950026A32D /* FirstViewController.xib */,
 				96E75327177C11950026A32D /* SecondViewController.xib */,
+				96E7532E177C1B240026A32D /* CVInfoViewController.xib */,
 				96E752E7177C10670026A32D /* Supporting Files */,
 			);
 			path = testApp;
@@ -214,6 +222,7 @@
 				96E75328177C11950026A32D /* FirstViewController.xib in Resources */,
 				96E75329177C11950026A32D /* SecondViewController.xib in Resources */,
 				96E7532B177C17020026A32D /* placeHolder.png in Resources */,
+				96E75330177C1B240026A32D /* CVInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +239,7 @@
 				96E7531F177C10E20026A32D /* AppDelegate.m in Sources */,
 				96E75320177C10E20026A32D /* SecondViewController.m in Sources */,
 				96E75321177C10E20026A32D /* FirstViewController.m in Sources */,
+				96E7532F177C1B240026A32D /* CVInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

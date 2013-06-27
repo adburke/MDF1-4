@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "VideoManager.h"
 #import "CVCellController.h"
+#import "CVInfoViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 
@@ -130,6 +131,7 @@
 // Fires when parsing is complete
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
+    // Reloads the collectionView to update with parsed data
     [self.collectionView reloadData];
 }
 
@@ -138,7 +140,7 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if (self.videosArray == 0) {
-        return 1;
+        return 10;
     } else {
         return self.videosArray.count;
     }
@@ -157,6 +159,16 @@
     [cell.cellImg setImageWithURL:[NSURL URLWithString:cellData.videoImgLrg]placeholderImage:[UIImage imageNamed:@"placeHolder.png"]];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CVInfoViewController *infoView = [[CVInfoViewController alloc] initWithNibName:@"CVInfoViewController" bundle:nil];
+    if (infoView) {
+        self.delegate = (id)infoView;
+        [self.delegate viewSelectedInfo:[self.videosArray objectAtIndex: indexPath.row]];
+        [self.navigationController pushViewController:infoView animated:TRUE];
+    }
 }
 
 #pragma mark - View lifecycle
