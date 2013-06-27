@@ -192,6 +192,7 @@
     CVInfoViewController *infoView = [[CVInfoViewController alloc] initWithNibName:@"CVInfoViewController" bundle:nil];
     if (infoView) {
         self.delegate = (id)infoView;
+        // Send delegate data to CVInfoViewController
         [self.delegate viewSelectedInfo:[self.videosArray objectAtIndex: indexPath.row]];
         [self.navigationController pushViewController:infoView animated:TRUE];
     }

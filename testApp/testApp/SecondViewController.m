@@ -180,6 +180,7 @@
 // Fires when parsing is complete
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
+    // Parsed Mutable array of relevant data to project put in UITextView - Left out xml data that I did not use
     self.textView.text = self.xmlTxt;
 }
 

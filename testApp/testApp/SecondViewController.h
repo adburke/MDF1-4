@@ -12,9 +12,11 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+// XML parsing variables
 @property (nonatomic, strong) NSMutableData *responseData;
 @property (nonatomic, strong) NSMutableString *currentStringValue;
-@property (nonatomic, strong) NSMutableArray *videosArray;
+
+// String for holding parsed xml structure
 @property (nonatomic, strong) NSMutableString *xmlTxt;
 
 @end
