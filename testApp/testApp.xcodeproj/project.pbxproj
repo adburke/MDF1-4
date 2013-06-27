@@ -29,6 +29,7 @@
 		96E75325177C110F0026A32D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E75324177C110F0026A32D /* ImageIO.framework */; };
 		96E75328177C11950026A32D /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E75326177C11950026A32D /* FirstViewController.xib */; };
 		96E75329177C11950026A32D /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E75327177C11950026A32D /* SecondViewController.xib */; };
+		96E7532B177C17020026A32D /* placeHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E7532A177C17020026A32D /* placeHolder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		96E75324177C110F0026A32D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		96E75326177C11950026A32D /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		96E75327177C11950026A32D /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		96E7532A177C17020026A32D /* placeHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeHolder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +85,6 @@
 		96E752D4177C10670026A32D = {
 			isa = PBXGroup;
 			children = (
-				96E75324177C110F0026A32D /* ImageIO.framework */,
-				96E75322177C11020026A32D /* SDWebImage.framework */,
 				96E752E6177C10670026A32D /* testApp */,
 				96E752DF177C10670026A32D /* Frameworks */,
 				96E752DE177C10670026A32D /* Products */,
@@ -102,6 +102,8 @@
 		96E752DF177C10670026A32D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96E75324177C110F0026A32D /* ImageIO.framework */,
+				96E75322177C11020026A32D /* SDWebImage.framework */,
 				96E752E0177C10670026A32D /* UIKit.framework */,
 				96E752E2177C10670026A32D /* Foundation.framework */,
 				96E752E4177C10670026A32D /* CoreGraphics.framework */,
@@ -133,6 +135,7 @@
 		96E752E7177C10670026A32D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96E7532A177C17020026A32D /* placeHolder.png */,
 				96E75302177C10670026A32D /* second.png */,
 				96E75304177C10670026A32D /* second@2x.png */,
 				96E752FB177C10670026A32D /* first.png */,
@@ -210,6 +213,7 @@
 				96E75314177C10C20026A32D /* CVCell.xib in Resources */,
 				96E75328177C11950026A32D /* FirstViewController.xib in Resources */,
 				96E75329177C11950026A32D /* SecondViewController.xib in Resources */,
+				96E7532B177C17020026A32D /* placeHolder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

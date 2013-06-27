@@ -149,15 +149,12 @@
 {
     static NSString *cellIdentifier = @"cvCell";
     CVCellController *cell = (CVCellController *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    if (self.videosArray == 0) {
-        //cell.cellLabel.text = @"Loading Data";
-    } else {
-        VideoManager *cellData = self.videosArray[indexPath.row];
-            
-        [cell.cellImg setImageWithURL:[NSURL URLWithString:cellData.videoImgLrg]
-                       placeholderImage:[UIImage imageNamed:@"first.png"]];
-        
-    }
+    
+    // Instance of VideoManager object used to access array of objects
+    VideoManager *cellData = self.videosArray[indexPath.row];
+    
+    // Call to SDWebImage.framework to asnyc load images with caching
+    [cell.cellImg setImageWithURL:[NSURL URLWithString:cellData.videoImgLrg]placeholderImage:[UIImage imageNamed:@"placeHolder.png"]];
     
     return cell;
 }
